@@ -259,9 +259,3 @@ div.leaflet-control-attribution.leaflet-control {
 div.leaflet-control-attribution.leaflet-control a {
 	color: #999;
 }
-@media (max-width: 600px) {
-	div.leaflet-control-attribution.leaflet-control {
-		margin-right: 5px;
-		margin-left: 120px;
-	}
-}

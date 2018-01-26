@@ -14,7 +14,7 @@ var communityGeoJSON = (function () {
 })();
 
 // Initialize the map
-var map = L.map('map').setView([42, -79], 2);
+var map = L.map('map').setView([0, 0], 0);
 
 // Add a tile layer
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -39,15 +39,25 @@ var orbitistIcon = L.icon({
     popupAnchor: [0, -40]
 });
 
-// Add a layer for the geojson
-L.geoJSON(communityGeoJSON, {
-  style: function (feature) {
-    return feature.properties && feature.properties.style;
-  },
-  
-  onEachFeature: onEachFeature,
+// Markercluster Group
+var markers = L.markerClusterGroup();
 
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {icon: orbitistIcon}).addTo(map);
-  }
-}).addTo(map);
+// Put layer into markercluster group.
+markers.addLayer(
+  L.geoJSON(communityGeoJSON, {
+    style: function (feature) {
+      return feature.properties && feature.properties.style;
+    },
+    onEachFeature: onEachFeature,
+
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, {icon: orbitistIcon});
+    }
+  })
+);
+
+// Add markercluster layer to the map.
+map.addLayer(markers);
+
+// Use leaflet hash do set location
+var hash = new L.Hash(map);
