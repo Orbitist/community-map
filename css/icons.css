@@ -1,0 +1,397 @@
+/* Icon styles */
+.orbitist-icon-blue {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-blue.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-green {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-green.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-red {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-red.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-yellow {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-yellow.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-orange {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-orange.png");
+background-size: 30px 30px;
+}
+.maki {
+background-size: 30px 30px;
+}
+/* A */
+.maki-aerialway {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/aerialway.svg");
+}
+.maki-airfield {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/airfield.svg");
+}
+.maki-airport {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/airport.svg");
+}
+.maki-alcohol-shop {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/alcohol-shop.svg");
+}
+.maki-america-football {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/america-football.svg");
+}
+.maki-art-gallery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/art-gallery.svg");
+}
+/* B */
+.maki-bakery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bakery.svg");
+}
+.maki-bank {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bank.svg");
+}
+.maki-bar {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bar.svg");
+}
+.maki-baseball {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/baseball.svg");
+}
+.maki-basketball {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/basketball.svg");
+}
+.maki-beer {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/beer.svg");
+}
+.maki-bicycle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bicycle.svg");
+}
+.maki-building {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/building.svg");
+}
+.maki-bus {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bus.svg");
+}
+/* C */
+.maki-cafe {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cafe.svg");
+}
+.maki-camera {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/camera.svg");
+}
+.maki-campsite {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/campsite.svg");
+}
+.maki-car {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/car.svg");
+}
+.maki-cemetery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cemetery.svg");
+}
+.maki-chemist {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/chemist.svg");
+}
+.maki-cinema {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cinema.svg");
+}
+.maki-circle-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/circle-stroked.svg");
+}
+.maki-circle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/circle.svg");
+}
+.maki-city {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/city.svg");
+}
+.maki-clothing-store {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/clothing-store.svg");
+}
+.maki-college {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/college.svg");
+}
+.maki-commercial {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/commercial.svg");
+}
+.maki-cricket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cricket.svg");
+}
+.maki-cross {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cross.svg");
+}
+/* D */
+.maki-dam {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dam.svg");
+}
+.maki-danger {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/danger.svg");
+}
+.maki-dentist {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dentist.svg");
+}
+.maki-disability {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/disability.svg");
+}
+.maki-dog-park {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dog-park.svg");
+}
+/* E */
+.maki-embassy {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/embassy.svg");
+}
+.maki-emergency-telephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/emergency-telephone.svg");
+}
+.maki-entrance {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/entrance.svg");
+}
+/* F */
+.maki-farm {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/farm.svg");
+}
+.maki-fast-food {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fast-food.svg");
+}
+.maki-ferry {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/ferry.svg");
+}
+.maki-fire-station {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fire-station.svg");
+}
+.maki-fuel {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fuel.svg");
+}
+/* G */
+.maki-garden {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/garden.svg");
+}
+.maki-gift {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/gift.svg");
+}
+.maki-golf {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/golf.svg");
+}
+.maki-grocery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/grocery.svg");
+}
+/* H */
+.maki-hairdresser {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/hairdresser.svg");
+}
+.maki-harbor {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/harbor.svg");
+}
+.maki-heart {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/heart.svg");
+}
+.maki-heliport {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/heliport.svg");
+}
+.maki-hospital {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/hospital.svg");
+}
+/* I */
+.maki-ice-cream {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/ice-cream.svg");
+}
+.maki-industrial {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/industrial.svg");
+}
+/* L */
+.maki-land-use {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/land-use.svg");
+}
+.maki-laundry {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/laundry.svg");
+}
+.maki-library {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/library.svg");
+}
+.maki-lighthouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/lighthouse.svg");
+}
+.maki-lodging {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/lodging.svg");
+}
+.maki-logging {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/logging.svg");
+}
+.maki-london-underground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/london-underground.svg");
+}
+/* M */
+.maki-marker-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/marker-stroked.svg");
+}
+.maki-marker {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/marker.svg");
+}
+.maki-minefield {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/minefield.svg");
+}
+.maki-mobilephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/mobilephone.svg");
+}
+.maki-monument {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/monument.svg");
+}
+.maki-museum {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/museum.svg");
+}
+.maki-music {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/music.svg");
+}
+/* O */
+.maki-oil-well {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/oil-well.svg");
+}
+/* P */
+.maki-park {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/park.svg");
+}
+.maki-park2 {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/park2.svg");
+}
+.maki-parking-garage {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/parking-garage.svg");
+}
+.maki-parking {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/parking.svg");
+}
+.maki-pharmacy {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/pharmacy.svg");
+}
+.maki-pitch {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/pitch.svg");
+}
+.maki-place-of-worship {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/place-of-worship.svg");
+}
+.maki-playground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/playground.svg");
+}
+.maki-police {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/police.svg");
+}
+.maki-polling-place {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/polling-place.svg");
+}
+.maki-post {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/post.svg");
+}
+.maki-prison {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/prison.svg");
+}
+/* R */
+.maki-rail-above {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-above.svg");
+}
+.maki-rail-light {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-light.svg");
+}
+.maki-rail-metro {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-metro.svg");
+}
+.maki-rail-underground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-underground.svg");
+}
+.maki-rail {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail.svg");
+}
+.maki-religious-christian {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-christian.svg");
+}
+.maki-religious-jewish {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-jewish.svg");
+}
+.maki-religious-muslim {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-muslim.svg");
+}
+.maki-restaurant {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/restaurant.svg");
+}
+.maki-roadblock {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/roadblock.svg");
+}
+.maki-rocket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rocket.svg");
+}
+/* S */
+.maki-school {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/school.svg");
+}
+.maki-scooter {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/scooter.svg");
+}
+.maki-shop {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/shop.svg");
+}
+.maki-skiing {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/skiing.svg");
+}
+.maki-slaughterhouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/slaughterhouse.svg");
+}
+.maki-soccer {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/soccer.svg");
+}
+.maki-square-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/square-stroked.svg");
+}
+.maki-square {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/square.svg");
+}
+.maki-star-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/star-stroked.svg");
+}
+.maki-star {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/star.svg");
+}
+.maki-suitcase {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/suitcase.svg");
+}
+.maki-swimming {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/swimming.svg");
+}
+/* T */
+.maki-telephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/telephone.svg");
+}
+.maki-tennis {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/tennis.svg");
+}
+.maki-theatre {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/theatre.svg");
+}
+.maki-toilets {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/toilets.svg");
+}
+.maki-town-hall {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/town-hall.svg");
+}
+.maki-town {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/town.svg");
+}
+.maki-triangle-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/triangle-stroked.svg");
+}
+.maki-triangle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/triangle.svg");
+}
+/* V */
+.maki-village {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/village.svg");
+}
+/* W */
+.maki-warehouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/warehouse.svg");
+}
+.maki-waste-basket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/waste-basket.svg");
+}
+.maki-water {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/water.svg");
+}
+.maki-wetland {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/wetland.svg");
+}
+/* Z */
+.maki-zoo {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/zoo.svg");
+}

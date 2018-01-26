@@ -1,0 +1,267 @@
+/* Leaflet popups */
+.leaflet-popup {
+margin-bottom: 0px;
+z-index: 50;
+}
+
+.leaflet-popup-content {
+margin: 0px 0px;
+z-index: 50;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+margin-top: 22px;
+margin-right: -10px;
+padding: 4px 3px 3px 4px;
+width: 25px;
+height: 25px;
+background-color: white;
+border-radius: 50%;
+box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+z-index: 55;
+}
+
+.leaflet-popup-content-wrapper {
+max-height: 350px;
+overflow-y: scroll; /* has to be scroll, not auto */
+-webkit-overflow-scrolling:touch;
+overflow-x: hidden;
+margin-top: 30px;
+padding: 0px;
+border-radius: 4px;
+z-index: 50;
+}
+
+img.popup-top-image {
+}
+
+/* Custom popup regions */
+.popupimage-expand {
+font-size: 30px;
+margin-top: -45px;
+margin-right: 8px;
+text-align: right;
+color: #eee;
+}
+.popupimage-expand:hover {
+color: #fff;
+}
+
+.popuptitle {
+margin: 5px;
+text-align: center;
+}
+
+.popupbody {
+	margin: 5px;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.popupbody p {
+font-size: 16px;
+}
+
+.popupbody h3 {
+margin-top: 10px;
+font-size: 20px;
+}
+
+.popupbody .btn {
+width: 100%;
+}
+
+/* Make popups smaller on small iphones */
+@media (max-height: 450px) {
+.leaflet-popup-content-wrapper {
+margin-top: 0px;
+max-height: 290px;
+}
+}
+
+/* Style Leaflet Zoom Controls */
+/* 
+.leaflet-left .leaflet-control {
+margin-left: 5px;
+}
+
+.leaflet-top .leaflet-control {
+margin-top: 5px;
+}
+ */
+
+.leaflet-control-zoom {
+position: fixed;
+bottom: 4px;
+}
+
+.leaflet-control-locate {
+position: fixed;
+bottom: 64px;
+}
+
+.leaflet-left .leaflet-control {
+margin-left: 0px;
+left: 4px;
+}
+
+@media (max-width: 600px) {
+	.leaflet-control-zoom {
+		display: none;
+	}
+	.leaflet-control-locate {
+		bottom: 4px;
+	}
+}
+
+/* 
+.leaflet-control-zoom-in, .leaflet-bar a:first-child {
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+font-size: 20px;
+padding-top: 2px;
+}
+
+.leaflet-control-zoom-out, .leaflet-bar a:last-child {
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+font-size: 20px;
+padding-top: 2px;
+}
+
+.leaflet-bar a, .leaflet-bar a:hover{
+width: 32px;
+height: 32px;
+}
+ */
+
+.leaflet-bar {
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+path.leaflet-clickable {
+stroke: rgb(30,93,129) !important;
+stroke-opacity: 0.8 !important;
+}
+
+/* Leaflet marker cluster mods 
+.marker-cluster-small {
+background-color: rgba(241, 194, 137, 0.8);
+}
+.marker-cluster-small div {
+background-color: rgba(241, 194, 137, 0.8);
+}
+.marker-cluster-medium {
+background-color: rgba(241, 194, 137, 0.8);
+}
+.marker-cluster-medium div {
+background-color: rgba(241, 194, 137, 0.8);
+}
+.marker-cluster-large {
+background-color: rgba(241, 194, 137, 0.8);
+}
+.marker-cluster-large div {
+background-color: rgba(241, 194, 137, 0.8);
+}
+*/
+
+.marker-cluster {
+background-clip: padding-box;
+border-radius: 20px;
+}
+.marker-cluster div {
+width: 30px;
+height: 30px;
+margin-left: 5px;
+margin-top: 5px;
+text-align: center;
+border-radius: 15px;
+font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.marker-cluster span {
+line-height: 30px;
+}
+
+
+/* Youtube videos */
+.popupbody .media-youtube-player {
+width:290px !important;
+height:175px !important;
+}
+
+/* Vimeo Videos */
+.popupbody .media-vimeo-player {
+width:290px !important;
+height:175px !important;
+}
+
+/* Icon Markers */
+.leaflet-tagged-marker i {
+position:absolute;
+font-size: 35px;
+padding-top: 0px;
+text-shadow: 1px 0px 2px white, -1px 0px 2px white, 0px 1px 2px white, 0px -1px 2px white;
+color: rgba(30, 93, 129, 1);
+}
+
+@keyframes pulsate {
+    0% {opacity: 1;}
+    50% {opacity: 0.1;}
+}
+
+.leaflet-tagged-marker i.fa-circle {
+position: absolute;
+font-size: 18px;
+padding-top: 25px;
+text-shadow: 1px 1px 1px white, -1px -1px 1px white, -1px 1px 1px white, 1px -1px 1px white;
+color: #666;
+opacity: 1;
+animation-name: pulsate;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+}
+
+/* Edit Button */
+.popupbody .fa-pencil {
+color: rgba(241,194,137,0.95);
+text-decoration: underline;
+display: block;
+}
+.popupbody .fa-pencil::after {
+content: " Edit ";
+}
+.popupbody .fa-pencil:hover {
+color: rgba(241,194,137,1);
+text-decoration: underline;
+}
+
+div.leaflet-control-attribution.leaflet-control {
+	margin-right: 65px;
+	font-size: 8px;
+	opacity:0.8;
+}
+div.leaflet-control-attribution.leaflet-control a {
+	color: #999;
+}
+@media (max-width: 600px) {
+	div.leaflet-control-attribution.leaflet-control {
+		margin-right: 5px;
+		margin-left: 120px;
+	}
+}

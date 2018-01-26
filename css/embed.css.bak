@@ -1,0 +1,53 @@
+.navbar {
+display: none;
+}
+
+#leaflet-map {
+position:fixed;
+top: 0px;
+left: 0px;
+width: 100% !important;
+height: 100% !important;
+}
+
+.leaflet-container {
+position:fixed;
+top: 0px;
+left: 0px;
+width: 100% !important;
+height: 100% !important;
+}
+
+.fullscreen-toggle {
+position: fixed;
+right: 4px;
+bottom: 4px;
+z-index: 40;
+}
+
+.fullscreen-toggle .btn-orbitist {
+background-color: rgba(241,194,137,0.95);
+}
+
+.btn-fullscreen {
+opacity: 0.6;
+border-radius: 0px;
+}
+
+.btn-fullscreen:hover {
+opacity: 0.8;
+}
+
+.btn-map-info {
+margin-right: 42px;
+opacity: 0.9;
+border-radius: 0px;
+}
+
+.btn-map-info:hover {
+opacity: 1;
+}
+
+div.leaflet-control-attribution.leaflet-control {
+display: none;
+}
