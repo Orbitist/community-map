@@ -1,4 +1,4 @@
-var geoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/points';
+var geoJsonAPI = '/api/geojson/points';
 
 // Create Markercluster Group
 var markers = L.markerClusterGroup();
@@ -41,31 +41,30 @@ L.tileLayer('https://api.mapbox.com/styles/v1/westfieldny/cjcxokl851c6v2spcor5ds
 
 // Function for rendering the popups. This is where they are styled yo!
 function onEachFeature(feature, layer) {
-  var baseUrl = 'http://live-westfield-ny.pantheonsite.io'
   // Check for featured image, then image gallery. If neither, don't use an image in popup
   if (feature.properties.field_featured_image.length > 2) {
     layer.bindPopup(
-    	'<img src="' + baseUrl + feature.properties.field_featured_image + '" width="301px" class="popup-top-image">' + 
-      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+    	'<img src="' + feature.properties.field_featured_image + '" width="301px" class="popup-top-image">' + 
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '" >' + feature.properties.name + '</a></h3></div>' + 
       feature.properties.description + 
-      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
     	{closeButton: true}
     );
   } else if (feature.properties.field_featured_image.length == 0 && feature.properties.field_image_gallery.length > 2) {
     layer.bindPopup(
-      '<img src="' + baseUrl + feature.properties.field_image_gallery + '" width="301px" class="popup-top-image">' + 
-      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+      '<img src="' + feature.properties.field_image_gallery + '" width="301px" class="popup-top-image">' + 
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' + 
       feature.properties.description + 
-      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
     	{closeButton: true}
     );
   } else {
     layer.bindPopup(
-      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' + 
       feature.properties.description + 
-      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
       {closeButton: true}
     );
@@ -113,7 +112,7 @@ function showSpinner() {
 // Filter Events
 function renderEvents() {
   markers.clearLayers();
-  var eventsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/events';
+  var eventsGeoJsonAPI = '/api/geojson/events';
   updateMap(eventsGeoJsonAPI);
   removeSpinner();
 }
@@ -125,7 +124,7 @@ async function filterEvents() {
 // Filter Points of interest
 function renderPointsOfInterest() {
   markers.clearLayers();
-  var pointsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/points';
+  var pointsGeoJsonAPI = '/api/geojson/points';
   updateMap(pointsGeoJsonAPI);
   removeSpinner();
 }
@@ -137,7 +136,7 @@ async function filterPointsOfInterest() {
 // Filter Organizations
 function renderOrganizations() {
   markers.clearLayers();
-  var orgsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/organizations';
+  var orgsGeoJsonAPI = '/api/geojson/organizations';
   updateMap(orgsGeoJsonAPI);
   removeSpinner();
 }
