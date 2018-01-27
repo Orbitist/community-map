@@ -1,16 +1,128 @@
-p.orbitist-link {
-	text-align: center;
-	background-color: #e2e2e2;
-	padding: 10px;
-	border-radius: 20px;
-	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-	color: #333;
+p, li {
+font-size: 16px;
 }
-p.orbitist-link:hover {
-	background-color: #eee;
-	text-decoration: none;
+
+a {
+color: rgba(30,93,129,0.8);
 }
+
+a:hover {
+color: rgba(30,93,129,1);
+}
+
+/* Z-INDEX Utilities */
+.z10 {
+z-index: 10;
+}
+.z20 {
+z-index: 20;
+}
+.z30 {
+z-index: 30;
+}
+.z40 {
+z-index: 40;
+}
+
+.shadow {
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/** Scrollbars **/
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.1);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/** BUTTONS **/
+.orbitist-btn {
+  border-radius: 50px;
+}
+
+a.orbitist-btn {
+	color: white;
+}
+
+a.orbitist-btn:hover {
+	color: #eee;
+}
+
+.btn-default {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-default:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-success {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-success:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-info {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-info:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-primary {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-primary:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-orbitist {
+background-color: rgba(241,194,137,0.9);
+border-color: rgba(241,194,137,0.6);
+color: #777;
+}
+
+.btn-orbitist:hover {
+background-color: rgba(241,194,137,1);
+border-color: rgba(241,194,137,0.8);
+color: #333;
+}
+
+p.btn.btn-default {
+overflow: hidden;
+}
+
 
 .spinner {
 position: fixed;
@@ -51,18 +163,3 @@ z-index: 9999999999999;
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 0; } }
-
-.btn-fullscreen {
-position: fixed;
-bottom: 4px;
-right: 4px;
-border-radius: 0px;
-}
-
-.leaflet-marker-pane .fa {
-font-size: 25px;
-padding-top: 0px;
-padding-left: 4px;
-text-shadow: 1px 0px 2px white, -1px 0px 2px white, 0px 1px 2px white, 0px -1px 2px white;
-color: #444;
-}

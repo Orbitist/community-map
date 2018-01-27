@@ -4,7 +4,7 @@ var communityGeoJSON = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=point_of_interest',
+        'url': 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=event',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -27,8 +27,35 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 // Function for rendering the popups. This is where they are styled yo!
 function onEachFeature(feature, layer) {
-  popupContent = feature.properties.name;
-  layer.bindPopup(popupContent);
+  var baseUrl = 'http://live-westfield-ny.pantheonsite.io'
+  // Check for featured image, then image gallery. If neither, don't use an image in popup
+  if (feature.properties.field_featured_image.length > 2) {
+    layer.bindPopup(
+    	'<img src="' + baseUrl + feature.properties.field_featured_image + '" width="301px" height="270px" class="popup-top-image">' + 
+      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+      feature.properties.description + 
+      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
+    	{closeButton: true}
+    );
+  } else if (feature.properties.field_featured_image.length == 0 && feature.properties.field_image_gallery.length > 2) {
+    layer.bindPopup(
+      '<img src="' + baseUrl + feature.properties.field_image_gallery + '" width="301px" height="270px" class="popup-top-image">' + 
+      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+      feature.properties.description + 
+      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
+    	{closeButton: true}
+    );
+  } else {
+    layer.bindPopup(
+      '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
+      feature.properties.description + 
+      '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
+      '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
+      {closeButton: true}
+    );
+  }
 }
 
 // Define the orbitistIcon
@@ -58,6 +85,9 @@ markers.addLayer(
 
 // Add markercluster layer to the map.
 map.addLayer(markers);
+
+// Fit bounds to markers layer
+map.fitBounds(markers.getBounds());
 
 // Use leaflet hash do set location
 var hash = new L.Hash(map);
