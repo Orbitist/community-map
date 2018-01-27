@@ -3,8 +3,10 @@ var geoJsonAPI = '/api/geojson/points';
 // Create Markercluster Group
 var markers = L.markerClusterGroup();
 
-// Initialize the map
-var map = L.map('map');
+// Initialize the map with options
+var map = L.map('map', {
+  scrollWheelZoom: false
+});
 
 // Define the orbitistIcon
 var orbitistIcon = L.icon({
@@ -30,7 +32,7 @@ var communityGeoJSON = (function () {
     });
     return json;
 })();
-  
+
 // Add a tile layer
 L.tileLayer('https://api.mapbox.com/styles/v1/westfieldny/cjcxokl851c6v2spcor5dsyfw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2VzdGZpZWxkbnkiLCJhIjoiY2pjeGxqcjhiMGljYzMzbzE0eXB6Z3ozYiJ9.VEtcYyEyNf1N2huTqRXElQ', {
   maxZoom: 18,
@@ -44,26 +46,26 @@ function onEachFeature(feature, layer) {
   // Check for featured image, then image gallery. If neither, don't use an image in popup
   if (feature.properties.field_featured_image.length > 2) {
     layer.bindPopup(
-    	'<img src="' + feature.properties.field_featured_image + '" width="301px" class="popup-top-image">' + 
-      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '" >' + feature.properties.name + '</a></h3></div>' + 
-      feature.properties.description + 
+    	'<img src="' + feature.properties.field_featured_image + '" width="301px" class="popup-top-image">' +
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '" >' + feature.properties.name + '</a></h3></div>' +
+      feature.properties.description +
       '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
     	{closeButton: true}
     );
   } else if (feature.properties.field_featured_image.length == 0 && feature.properties.field_image_gallery.length > 2) {
     layer.bindPopup(
-      '<img src="' + feature.properties.field_image_gallery + '" width="301px" class="popup-top-image">' + 
-      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' + 
-      feature.properties.description + 
+      '<img src="' + feature.properties.field_image_gallery + '" width="301px" class="popup-top-image">' +
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' +
+      feature.properties.description +
       '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
     	{closeButton: true}
     );
   } else {
     layer.bindPopup(
-      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' + 
-      feature.properties.description + 
+      '<div class="popupbody"><div class="popuptitle"><h3><a href="' + feature.properties.path + '">' + feature.properties.name + '</a></h3></div>' +
+      feature.properties.description +
       '<p><a href="' + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
       '<p><a href="https://www.google.com/maps/dir/Current+Location/' + feature.geometry.coordinates[1] + ',' + feature.geometry.coordinates[0] + '" target="_blank" class="btn btn-default orbitist-btn"><span class="fa fa-car center-block"></span> Driving Directions</a></p>',
       {closeButton: true}
