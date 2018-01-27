@@ -1,4 +1,4 @@
-var geoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson';
+var geoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/points';
 
 // Create Markercluster Group
 var markers = L.markerClusterGroup();
@@ -46,7 +46,7 @@ function onEachFeature(feature, layer) {
   // Check for featured image, then image gallery. If neither, don't use an image in popup
   if (feature.properties.field_featured_image.length > 2) {
     layer.bindPopup(
-    	'<img src="' + baseUrl + feature.properties.field_featured_image + '" width="301px" height="270px" class="popup-top-image">' + 
+    	'<img src="' + baseUrl + feature.properties.field_featured_image + '" width="301px" class="popup-top-image">' + 
       '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
       feature.properties.description + 
       '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
@@ -55,7 +55,7 @@ function onEachFeature(feature, layer) {
     );
   } else if (feature.properties.field_featured_image.length == 0 && feature.properties.field_image_gallery.length > 2) {
     layer.bindPopup(
-      '<img src="' + baseUrl + feature.properties.field_image_gallery + '" width="301px" height="270px" class="popup-top-image">' + 
+      '<img src="' + baseUrl + feature.properties.field_image_gallery + '" width="301px" class="popup-top-image">' + 
       '<div class="popupbody"><div class="popuptitle"><h3>' + feature.properties.name + '</h3></div>' + 
       feature.properties.description + 
       '<p><a href="' + baseUrl + feature.properties.path + '" class="btn btn-default orbitist-btn"><span class="fa fa-link center-block"></span> Learn More</a></p>' +
@@ -110,27 +110,41 @@ function showSpinner() {
   $("body").append("<div class='spinner'><div class='sk-spinner sk-spinner-pulse'></div></div>");
 }
 
-// Filter Functions from button pushes
-function filterEvents() {
-  showSpinner();
+// FILTER FUNCTIONS FROM BUTTON PUSHES
+// Filter Events
+function renderEvents() {
   markers.clearLayers();
-  var eventsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=event';
+  var eventsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/events';
   updateMap(eventsGeoJsonAPI);
   removeSpinner();
 }
-function filterPointsOfInterest() {
+async function filterEvents() {
   showSpinner();
+  renderEvents();
+}
+
+// Filter Points of interest
+function renderPointsOfInterest() {
   markers.clearLayers();
-  var pointsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=point_of_interest';
+  var pointsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/points';
   updateMap(pointsGeoJsonAPI);
   removeSpinner();
 }
-function filterOrganizations() {
+async function filterPointsOfInterest() {
   showSpinner();
+  renderPointsOfInterest();
+}
+
+// Filter Organizations
+function renderOrganizations() {
   markers.clearLayers();
-  var orgsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=organization';
+  var orgsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson/organizations';
   updateMap(orgsGeoJsonAPI);
   removeSpinner();
+}
+async function filterOrganizations() {
+  showSpinner();
+  renderOrganizations();
 }
 
 // Remove spinner when the document is ready the first time
