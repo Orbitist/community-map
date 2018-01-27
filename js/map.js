@@ -1,10 +1,28 @@
+var geoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson';
+
+// Create Markercluster Group
+var markers = L.markerClusterGroup();
+
+// Initialize the map
+var map = L.map('map');
+
+// Define the orbitistIcon
+var orbitistIcon = L.icon({
+    iconUrl: 'img/orbitist-icon-blue.png',
+    iconSize: [30, 30],
+    iconAnchor: [15, 30],
+    popupAnchor: [0, -40]
+});
+
+var updateMap = function(mapJSON) {
+
 // Go get it!! The GeoJSON that is!
 var communityGeoJSON = (function () {
     var json = null;
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=event',
+        'url': mapJSON,
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -12,10 +30,7 @@ var communityGeoJSON = (function () {
     });
     return json;
 })();
-
-// Initialize the map
-var map = L.map('map').setView([0, 0], 0);
-
+  
 // Add a tile layer
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
   maxZoom: 18,
@@ -58,17 +73,6 @@ function onEachFeature(feature, layer) {
   }
 }
 
-// Define the orbitistIcon
-var orbitistIcon = L.icon({
-    iconUrl: 'img/orbitist-icon-blue.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
-    popupAnchor: [0, -40]
-});
-
-// Markercluster Group
-var markers = L.markerClusterGroup();
-
 // Put layer into markercluster group.
 markers.addLayer(
   L.geoJSON(communityGeoJSON, {
@@ -89,5 +93,47 @@ map.addLayer(markers);
 // Fit bounds to markers layer
 map.fitBounds(markers.getBounds());
 
-// Use leaflet hash do set location
-var hash = new L.Hash(map);
+} // End updateMap variable function
+
+// Run the entire functional map code
+updateMap(geoJsonAPI);
+
+// Remove Spinner Function
+function removeSpinner() {
+  $(document).find(".spinner").delay(2000).fadeOut(500, function () {
+    $(this).remove();
+  });
+}
+
+// Show Spinner Function
+function showSpinner() {
+  $("body").append("<div class='spinner'><div class='sk-spinner sk-spinner-pulse'></div></div>");
+}
+
+// Filter Functions from button pushes
+function filterEvents() {
+  showSpinner();
+  markers.clearLayers();
+  var eventsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=event';
+  updateMap(eventsGeoJsonAPI);
+  removeSpinner();
+}
+function filterPointsOfInterest() {
+  showSpinner();
+  markers.clearLayers();
+  var pointsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=point_of_interest';
+  updateMap(pointsGeoJsonAPI);
+  removeSpinner();
+}
+function filterOrganizations() {
+  showSpinner();
+  markers.clearLayers();
+  var orgsGeoJsonAPI = 'http://live-westfield-ny.pantheonsite.io/api/geojson?type=organization';
+  updateMap(orgsGeoJsonAPI);
+  removeSpinner();
+}
+
+// Remove spinner when the document is ready the first time
+$(document).ready(function() {
+  removeSpinner();
+});
